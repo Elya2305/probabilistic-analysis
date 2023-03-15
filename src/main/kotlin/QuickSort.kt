@@ -8,7 +8,7 @@ fun main() {
     println(arr.contentToString())
 }
 
-/* The main function that implements QuickSort
+/* The quick.sort.main function that implements QuickSort
               arr[] --> Array to be sorted,
               low --> Starting index,
               high --> Ending index
@@ -20,7 +20,7 @@ private fun quickSort(arr: IntArray, low: Int, high: Int) {
         // is now at right place
         val pi = partition(arr, low, high)
 
-        // Separately sort elements before
+        // Separately quick.sort elements before
         // partition and after partition
         quickSort(arr, low, pi - 1)
         quickSort(arr, pi + 1, high)

@@ -1,3 +1,5 @@
 /coursework.iml
 /.idea/
 /out/
+.gradle
+build
