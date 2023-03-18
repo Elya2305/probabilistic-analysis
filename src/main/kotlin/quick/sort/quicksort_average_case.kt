@@ -17,7 +17,7 @@ import kotlin.random.Random
  * */
 
 fun main() {
-    val sizes = doubleArrayOf(10.0, 100.0, 200.0, 300.0, 400.0, 500.0, 1000.0, 2000.0, 3000.0)
+    val sizes = DoubleArray(3000) { it.toDouble() + 1 }
     val actualCounters: ArrayList<Double> = ArrayList()
 
     for (n in sizes) {
@@ -47,9 +47,9 @@ private fun quickSort(arr: IntArray, low: Int, high: Int): Pair<IntArray, Long> 
         iterations += leftIterations + rightIterations
         return Pair(arr, iterations)
     }
-    if (low == high) { // to cover last element from right tree
-        return Pair(arr, 1)
-    }
+//    if (low == high) { // to cover last element from right tree
+//        return Pair(arr, 1)
+//    }
     return Pair(arr, 0)
 }
 
@@ -62,7 +62,7 @@ private fun partition(arr: IntArray, low: Int, high: Int): Pair<Long, Int> {
     var i = low - 1
     for (j in low until high) {
         iterations++
-        if (arr[j] <= pivot) {
+        if (arr[j] < pivot) {
             i++
             swap(arr, i, j)
         }
