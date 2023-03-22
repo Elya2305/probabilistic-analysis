@@ -47,9 +47,9 @@ private fun quickSort(arr: IntArray, low: Int, high: Int): Pair<IntArray, Long> 
         iterations += leftIterations + rightIterations
         return Pair(arr, iterations)
     }
-//    if (low == high) { // to cover last element from right tree
-//        return Pair(arr, 1)
-//    }
+    if (low == high) { // to cover last element from right tree
+        return Pair(arr, 1)
+    }
     return Pair(arr, 0)
 }
 
