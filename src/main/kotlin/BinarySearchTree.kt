@@ -1,3 +1,27 @@
+fun main() {
+    val tree = BinarySearchTree()
+
+    /*
+              50
+            /	 \
+           30	 70
+          / \    /
+        20  40  60
+    */
+    tree.insert(50)
+    tree.insert(30)
+    tree.insert(20)
+    tree.insert(40)
+    tree.insert(70)
+    tree.insert(60)
+
+    println("70 is present: ${tree.search(70)}")
+    println("10 is present: ${tree.search(10)}")
+
+    tree.delete(50)
+    tree.inorder()
+}
+
 internal class BinarySearchTree {
 
     internal inner class Node(var key: Int) {
@@ -88,28 +112,4 @@ internal class BinarySearchTree {
         }
         return minval.key
     }
-}
-
-fun main() {
-    val tree = BinarySearchTree()
-
-    /*
-              50
-            /	 \
-           30	 70
-          / \    /
-        20  40  60
-    */
-    tree.insert(50)
-    tree.insert(30)
-    tree.insert(20)
-    tree.insert(40)
-    tree.insert(70)
-    tree.insert(60)
-
-    println("70 is present: ${tree.search(70)}")
-    println("10 is present: ${tree.search(10)}")
-
-    tree.delete(50)
-    tree.inorder()
 }

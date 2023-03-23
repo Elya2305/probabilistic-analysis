@@ -10,6 +10,13 @@ import jetbrains.letsPlot.scale.scaleYContinuous
 import kotlin.math.log2
 import kotlin.math.max
 
+fun main() {
+    worstInsertionPerformanceAnalysis()
+    averageInsertionPerformanceAnalysis()
+    averageSearchPerformanceAnalysis()
+    averageDeletePerformanceAnalysis()
+}
+
 class BinarySearchTree {
 
     inner class Node(var key: Int) {
@@ -91,13 +98,6 @@ class BinarySearchTree {
         }
         return minval.key
     }
-}
-
-fun main() {
-    worstInsertionPerformanceAnalysis()
-    averageInsertionPerformanceAnalysis()
-    averageSearchPerformanceAnalysis()
-    averageDeletePerformanceAnalysis()
 }
 
 fun averageInsertionPerformanceAnalysis() {

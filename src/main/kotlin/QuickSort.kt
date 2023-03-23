@@ -1,9 +1,11 @@
+import kotlin.random.Random
+
 /*
 * pivot = last element
 * */
 
 fun main() {
-    val arr = intArrayOf(21, 90, 61)
+    val arr = IntArray(100) { Random.nextInt(100) }
     quickSort(arr, 0, arr.size - 1)
     println(arr.contentToString())
 }
@@ -29,9 +31,8 @@ private fun quickSort(arr: IntArray, low: Int, high: Int) {
 
 /* This function takes last element as pivot, places
        the pivot element at its correct position in sorted
-       array, and places all smaller (smaller than pivot)
-       to left of pivot and all greater elements to right
-       of pivot */
+       array, and places all smaller than pivot to left of
+       pivot and all greater elements to right of pivot */
 fun partition(arr: IntArray, low: Int, high: Int): Int {
 
     // pivot
